@@ -1,0 +1,209 @@
+*{
+    //border:1px solid black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom:2px solid rgba(0,0,0,0.1);
+    height: 100px;
+    .brand-logo{
+        display: flex;
+        align-items: center;
+        .menu{
+            display: none;
+            margin-right:25px;
+            cursor: pointer;
+            @media (max-width : 728px){
+                display: block;
+            }
+        }
+    }
+    nav{
+        flex:1;
+        margin: 0 20px;
+        font-family: 'Kumbh Sans', sans-serif;
+        height: 100px;
+        .close{
+            display: none;
+        }
+        ul{
+            height: 100px;
+            li{
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 15px;
+                border-bottom: 2px solid transparent;
+                border-top: 2px solid transparent;
+                transition: 0.4s;
+                cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color: hsl(219, 9%, 45%)
+                }
+                &:hover{
+                    border-bottom: 2px solid hsl(26, 100%, 55%);
+                    a{
+                        color: hsl(220, 13%, 13%);
+                    }
+                }
+            }
+        }
+        @media (max-width : 728px){
+            display: none;
+        }
+    }
+    @media (max-width: 728px) {
+        .appear{
+            position: fixed;
+            left: 0;top:0;
+            width: 200px;
+            height: 100vh;
+            display: block;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            z-index: +99;
+            transition: 0.4s;
+            margin: 0;
+            .close{
+                display: flex;
+                justify-content: flex-end;
+                padding: 15px;
+                cursor: pointer;
+                i{
+                    font-size: 25px;
+                }
+            }
+            ul{
+                display: block;
+                border: 0;
+                height: auto;
+                li{
+                    padding: 10px;
+                    border: 0;
+                    height: auto;
+                    display: block;
+                    &:hover{
+                        border: 0;
+                    }
+                }
+            }
+        }  
+    }
+    
+    .avatar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:25px;
+        .cart{
+            position: relative;
+            &:hover  .shopping-cart{
+                display: block;
+            }
+            .icon{
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            .size{
+               position: absolute;left:15px;top:-8px;
+               background-color: hsl(26, 100%, 55%);
+               min-width: 20px;
+               height: 15px;
+               border-radius: 5px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               color:#fff;
+               font-size: 10px;
+               font-family: 'Kumbh Sans', sans-serif;
+            }
+            
+            .shopping-cart{
+                position: absolute;
+                top:25px;right: 0vw;
+                min-width: 300px;
+                min-height: 150px;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                display: none;
+                flex-direction: column;
+                padding: 0;
+                font-family: 'Kumbh Sans', sans-serif;
+                .pcart{
+                       font-weight: bold;
+                       border-bottom: 2px solid rgba(177, 177, 177,0.5);
+                       padding:18px 15px;
+                       font-size: 13px;
+                }
+                .container{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    .row{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 5px 0;
+                        img{
+                            width: 50px;
+                            border-radius: 5px;
+                        }
+                        p{
+                            font-size: 13px;
+                            color:#a1a1a1;
+                            line-height: 22px;
+                            span{
+                                font-weight: bold;
+                                color: #000;
+                            }
+                        }
+                        i{
+                            cursor: pointer;
+                        }
+                    }
+                    button{
+                        padding: 7px;
+                        background: chocolate;
+                        color:#fff;
+                        margin: 15px 0;
+                        border: 0;
+                        outline: 0;
+                        border-radius: 10px;
+                        font-family: 'Kumbh Sans', sans-serif;
+                    }
+                }
+                h6{
+                    display: inline-block;
+                    vertical-align: center;
+                    text-align: center;
+                    width: 100%;
+                    padding: 65px 0;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .avatar{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border:2px solid transparent ;
+            cursor: pointer;
+            &:hover{
+                border:2px solid hsl(26, 100%, 55%) ;
+            }
+        }
+    }
+}
