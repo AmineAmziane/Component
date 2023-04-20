@@ -72,11 +72,11 @@
             margin: 0;
             .close{
                 display: flex;
-                justify-content: flex-end;
-                padding: 15px;
+                justify-content: flex-start;
+                padding: 19px;
                 cursor: pointer;
                 i{
-                    font-size: 25px;
+                    font-size: 22px;
                 }
             }
             ul{
@@ -88,6 +88,15 @@
                     border: 0;
                     height: auto;
                     display: block;
+                    font-weight: bold;
+                    color:#000;
+                    font-size: 14px;
+                    a{
+                        color: #000;
+                        &:hover{
+                            color: #a1a1a1;
+                        }
+                    }
                     &:hover{
                         border: 0;
                     }
@@ -150,7 +159,7 @@
                 .container{
                     display: flex;
                     flex-direction: column;
-                    padding: 10px;
+                    padding: 10px 15px;
                     .row{
                         display: flex;
                         justify-content: space-between;
@@ -191,6 +200,9 @@
                     width: 100%;
                     padding: 65px 0;
                     font-size: 15px;
+                }
+                @media (max-width:728px){
+                    left:-50vw;
                 }
             }
         }

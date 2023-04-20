@@ -30,7 +30,7 @@ const Navbar = (props) =>{
             <div className='avatar'>
                 <div className='cart'>
                     <i className="ri-shopping-cart-2-line icon"></i>
-                    <span className='size'>{props.count}</span>
+                    {props.count > 0 ? <><span className='size'>{props.count}</span></>:''}
                     <div className='shopping-cart'>
                         {props.count ? <><p className='pcart'>Cart</p>
                         <div className='container'>
